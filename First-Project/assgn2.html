@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bus Booking System</title>
+  <title>Seat Book</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,6 +12,7 @@
       min-height: 100vh;
       position: relative;
     }
+    /* Navbar */
     .navbar {
       display: flex;
       align-items: center;
@@ -28,13 +29,14 @@
       font-size: 20px;
       margin: 0;
     }
+    /* Center heading */
     .center-text {
       text-align: center;
       margin: 20px 0;
       font-size: 24px;
       font-weight: bold;
     }
-
+    /* Form container */
     .form-container {
       display: flex;
       justify-content: center;
@@ -50,25 +52,18 @@
       padding: 20px;
       border: 1px solid #ccc;
       border-radius: 8px;
+      text-align: left;
     }
     .form-group {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     .form-group label {
       display: block;
       font-weight: bold;
-      margin-bottom: 5px;
-    }
-    .form-group input, 
-    .form-group select {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+      margin-bottom: 8px;
     }
     .form-group input[type="radio"] {
-      width: auto;
-      margin-right: 5px;
+      margin-right: 8px;
     }
     /* Right side image */
     .bus-image {
@@ -79,19 +74,13 @@
       max-width: 500px;
       border-radius: 8px;
     }
-    /* Seat Book button (inside form) */
-    .seat-btn {
-      background-color: #28a745;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-top: 10px;
-    }
-    .seat-btn:hover {
-      background-color: #1e7e34;
+    /* Thank You text */
+    .thank-text {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #28a745;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -110,30 +99,22 @@
   <!-- Form + Image -->
   <div class="form-container">
     <div class="form-fields">
+
       <div class="form-group">
-        <label>User Name</label>
-        <input type="text" placeholder="Enter your name">
+        <label>Select Seat Mode</label>
+        <input type="radio" name="seatmode" value="AC"> AC <br>
+        <input type="radio" name="seatmode" value="Non-AC"> Non-AC
       </div>
+
       <div class="form-group">
-        <label>User Password</label>
-        <input type="password" placeholder="Enter password">
+        <label>Select Payment Mode</label>
+        <input type="radio" name="payment" value="UPI"> UPI <br>
+        <input type="radio" name="payment" value="ATM"> ATM
       </div>
-      <div class="form-group">
-        <label>User Gender</label>
-        <input type="radio" name="gender" value="Male"> Male
-        <input type="radio" name="gender" value="Female"> Female
+      <div class="thank-text">
+        THANK OUR SERVICES
       </div>
-      <div class="form-group">
-        <label>Select City</label>
-        <select>
-          <option value="delhi">Delhi</option>
-          <option value="mumbai">Mumbai</option>
-          <option value="kolkata">Kolkata</option>
-          <option value="chennai">Chennai</option>
-        </select>
-      </div>
-      <a href="assgn2.html"><button class="seat-btn">Seat Book</button></a>
-      
+
     </div>
 
     <div class="bus-image">
