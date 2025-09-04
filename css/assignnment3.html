@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Food Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 2px solid #eee;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-content h2 {
+            font-size: 22px;
+            margin: 10px 0;
+            color: #444;
+        }
+
+        .price {
+            font-size: 18px;
+            color: #e67e22;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .benefits {
+            font-size: 14px;
+            color: #666;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Delicious Food Menu </h1>
+
+    <div class="card-container">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D"
+                alt="Burger">
+            <div class="card-content">
+                <h2>Cheesy Burger</h2>
+                <p class="price">₹120</p>
+                <p class="benefits"> Fresh veggies<br> Juicy patty<br> Extra cheese</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://t3.ftcdn.net/jpg/00/27/57/96/360_F_27579652_tM7V4fZBBw8RLmZo0Bi8WhtO2EosTRFD.jpg"
+                alt="Pizza">
+            <div class="card-content">
+                <h2>Italian Pizza</h2>
+                <p class="price">₹250</p>
+                <p class="benefits"> Crispy base<br> Loaded cheese<br> Authentic taste</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/12/samosa-recipe.jpg" alt="Samosa">
+            <div class="card-content">
+                <h2>Spicy Samosa</h2>
+                <p class="price">₹30</p>
+                <p class="benefits"> Crunchy crust<br> Spiced filling<br> Perfect snack</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
