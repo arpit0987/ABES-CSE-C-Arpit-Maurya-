@@ -5,27 +5,50 @@
         .ar {
             display: grid;
             background-color: rgb(7, 141, 146);
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto auto auto auto auto auto;
             padding: 12px;
-
         }
 
-        .ar >div{
+        .ar > div {
             background-color: chartreuse;
-            border: 5px solid rgb(186, 31, 98);
-            padding: 10px;
-            font-size: 30px;
+            border: 3px solid rgb(186, 31, 98);
+            padding: 15px;
+            font-size: 20px;
             text-align: center;
+            font-weight: bold;
+        }
+
+        .header {
+            background-color: orange;
         }
     </style>
 </head>
 <body>
+    <h2 style="text-align:center; color:darkblue;">Weekly Timetable</h2>
     <div class="ar">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-        <div>5</div>
+        <!-- Header Row -->
+        <div class="header">Day/Period</div>
+        <div class="header">Period 1</div>
+        <div class="header">Period 2</div>
+        <div class="header">Period 3</div>
+        <div class="header">Period 4</div>
+        <div class="header">Period 5</div>
+
+        <!-- Monday -->
+        <div>Monday</div>
+        <div>DAA</div>
+        <div>WEB TECHNOLOGY</div>
+        <div>OOSD</div>
+        <div>Break</div>
+        <div>DAA</div>
+
+        <!-- Tuesday -->
+        <div>Tuesday</div>
+        <div>WEB TECHNOLOGY</div>
+        <div>OOSD</div>
+        <div>DAA</div>
+        <div>Break</div>
+        <div>WEB TECHNOLOGY</div>
     </div>
 </body>
 </html>
