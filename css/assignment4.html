@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Clone</title>
+    <!-- Roboto font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f1f3f6;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #0C73EB;
+            /* Flipkart Blue */
+            padding: 10px 40px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .logo img {
+            width: 75px;
+        }
+
+        .logo span {
+            font-size: 11px;
+            font-style: italic;
+            color: #ffe500;
+            margin-top: -2px;
+        }
+
+        .search-box {
+            flex: 1;
+            display: flex;
+            background-color: white;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .search-box button {
+            background-color: white;
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #0C73EB;
+        }
+
+        .nav-options {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* Login button styled like Flipkart */
+        .login-btn {
+            display: flex;
+            align-items: center;
+            background: white;
+            color: #0C73EB;
+            padding: 6px 18px;
+            border-radius: 2px;
+            font-weight: bold;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .login-btn i {
+            font-size: 16px;
+        }
+
+        .dots {
+            font-size: 18px;
+            margin-left: 5px;
+        }
+
+        /* Categories row */
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 12px 40px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .categories div {
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .categories div:hover {
+            transform: scale(1.05);
+        }
+
+        .categories img {
+            width: 64px;
+            height: 64px;
+            display: block;
+            margin: auto;
+        }
+
+        .categories p {
+            margin-top: 6px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
+                alt="Flipkart Logo">
+            <span>Explore <b>Plus</b></span>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for products, brands and more">
+            <button>🔍</button>
+        </div>
+
+        <div class="nav-options">
+            <div class="login-btn"><img
+                    src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg"
+                    alt="Login" class="_1XmrCc _2zJ7Pb" width="24" height="24">Login</div>
+            <div>Become a Seller</div>
+            <div>More <span class="dots">⋮</span></div>
+            <div><img
+                    src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"
+                    alt="Cart" class="_1XmrCc" width="24" height="24">Cart</div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="categories">
+        <div>
+            <img src="https://img.icons8.com/color/96/000000/smartphone.png" alt="Mobiles">
+            <p>Mobiles</p>
+        </div>
+        <div>
+            <img src="https://img.icons8.com/color/96/000000/t-shirt.png" alt="Fashion">
+            <p>Fashion</p>
+        </div>
+        <div>
+            <img src="https://img.icons8.com/color/96/000000/laptop.png" alt="Electronics">
+            <p>Electronics</p>
+        </div>
+        <div>
+            <img src="https://img.icons8.com/color/96/000000/grocery.png" alt="Grocery">
+            <p>Grocery</p>
+        </div>
+        <div>
+            <img src="https://img.icons8.com/color/96/000000/books.png" alt="Books">
+            <p>Books</p>
+        </div>
+        <div>
+            <img src="https://img.icons8.com/color/96/000000/appliances.png" alt="Appliances">
+            <p>Appliances</p>
+        </div>
+        <div>
+            <img src="https://img.icons8.com/color/96/000000/cosmetic-brush.png" alt="Beauty">
+            <p>Beauty</p>
+        </div>
+        <div>
+            <img src="https://img.icons8.com/color/96/000000/toy-car.png" alt="Toys">
+            <p>Toys</p>
+        </div>
+        <div>
+            <img src="https://img.icons8.com/color/96/000000/sofa.png" alt="Furniture">
+            <p>Furniture</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
