@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .card {
+            border: 2px solid black;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .title img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        #output {
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="c1">
+                <img id="img1" src="BTech-CSE-2023-1.jpg" alt="Logo">
+                <hr>
+                <button onclick="hideImage()">Hide</button>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="title">
+                <img src="counter.webp" alt="Logo">
+                <h1>Counter App</h1>
+            </div>
+
+            <div id="output"></div>
+            <button onclick="increment()">+</button>
+            <button onclick="decrement()">-</button>
+        </div>
+
+
+        <div class="card">
+            <div class="c3">
+                <img id="img3" src="cse-blog.jpg" alt="Third">
+                <hr>
+                <button onclick="changeImage()">Change</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var count = 0;
+        var maxLimit = 10;
+        var minLimit = 0;
+
+        function display() {
+            document.getElementById("output").innerHTML = count;
+        }
+
+        function increment() {
+            if (count < maxLimit) {
+                count++;
+                display();
+            } else {
+                alert("Maximum limit reached (10)");
+            }
+        }
+
+        function decrement() {
+            if (count > minLimit) {
+                count--;
+                display();
+            } else {
+                alert("Minimum limit reached (0)");
+            }
+        }
+        display();
+        function hideImage() {
+            document.getElementById("img1").style.display = "none";
+        }
+        function changeImage() {
+            document.getElementById("img3").src = "images.jpeg";
+        }
+    </script>
+</body>
+
+</html>
