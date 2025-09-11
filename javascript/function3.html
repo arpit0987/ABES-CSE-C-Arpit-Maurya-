@@ -3,9 +3,22 @@
 <head>
     
 </head>
-<body>
-    <button>RED</button>
-    <button>GREEN</button>
-    <button>BLUE</button>
+<body id="arp">
+    
+    <button onclick="red()">RED</button>
+    <button onclick="green()">GREEN</button>
+    <button onclick="blue()">BLUE</button>
+
+    <script>
+        function red() {
+            document.getElementById("arp").style.backgroundColor="red";
+        }
+        function green() {
+            document.getElementById("arp").style.backgroundColor="green";
+        }
+         function blue() {
+            document.getElementById("arp").style.backgroundColor="blue";
+        }
+    </script>
 </body>
 </html>
