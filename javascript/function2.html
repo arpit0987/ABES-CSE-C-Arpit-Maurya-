@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+    #arp{
+        border: 5px solid red;
+        height: 200px;
+        width: 200px;
+        background-color: rgb(20, 150, 137);
+    }
+   </style>
+</head>
+<body>
+
+    <div id="arp">
+        <button onclick="ar()">click</button>
+        <p id="aaa"></p>
+
+        <button onclick="arp()">clear</button>
+    </div>
+
+
+    <script>
+        function ar() 
+        {
+            document.getElementById("aaa").innerHTML="<h1>Hello</h1>";
+        }
+
+        function arp()
+        {
+            document.getElementById("aaa").innerHTML="";
+        }
+
+          
+
+    </script>
+</body>
+</html>
