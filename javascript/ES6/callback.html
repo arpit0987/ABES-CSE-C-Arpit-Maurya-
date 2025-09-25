@@ -5,17 +5,33 @@
 </head>
 <body>
     <script>
-        function sum(a,b)
+        function getData(dataid, getNextData)
         {
-            console.log(a+b);
+            setTimeout(()=>{
+                console.log("data",dataid);
+                if(getNextData){
+                    getNextData();
+                }
+            },2000);
         }
+        getData(1,()=>{
+            getData(2,()=>{
+                getData(3,()=>{
+                   
+                });
+            });
+        });
+       
+       // function sum(a,b)
+       // {
+        //    console.log(a+b);
+       // }
 
-        function calculator(a,b,sumcallback)
-        {
-            sumcallback(a,b);
-
-        }
-        calculator(10,20,sum);
+       // function calculator(a,b,sumcallback)
+        //{
+         //   sumcallback(a,b);
+        //}
+        //calculator(10,20,sum);
     </script>
 </body>
 </html>
