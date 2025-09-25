@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .card {
+      width: 300px;
+      min-height: 200px;
+      background: teal;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      margin: 10px;
+      float: left;
+    }
+    input {
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      width: 70%;
+    }
+    button {
+      padding: 5px 10px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: rgba(255,255,255,0.2);
+      margin: 5px 0;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="card">
+    <h2>To Do List</h2>
+    <input type="text" id="task"><button onclick="addTask()">+</button><br><br>
+    <input type="text" id="ta"><button onclick="addT()">+</button><br><br>
+    <input type="text" id="ar"><button onclick="abes()">+</button><br><br>
+    <button onclick="showList()">Show All</button>
+  </div>
+
+  <div class="card">
+    <h2>To Do List</h2>
+    <ul id="list"></ul>
+    <ul id="lis"></ul>
+    <ul id="a"></ul>
+  </div>
+
+  <script>
+    let tasks = ""; 
+
+    function addTask() {
+      let task = document.getElementById("task").value;
+      if(task !== "") {
+        tasks = tasks + "<li>" + task + "</li>";  
+        document.getElementById("task").value = "";
+        document.getElementById("list").innerHTML = tasks; 
+      }
+    }
+      function addT() {
+      let task = document.getElementById("ta").value;
+      if(task !== "") {
+        tasks = tasks + "<lis>" + task + "</lis>";  
+        document.getElementById("ta").value = "";
+        document.getElementById("lis").innerHTML = tasks; 
+      }
+    }
+     function abes() {
+           let inputfield = document.getElementById("aaa");
+           let value = inputfield.value;
+           document.write(value);
+        }
+
+    function showList() {
+      document.getElementById("list").innerHTML = tasks;
+       document.getElementById("lis").innerHTML = tasks;
+        document.getElementById("a").innerHTML = tasks;
+    }
+  </script>
+</body>
+</html>
