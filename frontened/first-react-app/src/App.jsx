@@ -1,24 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Card from './Component/Card'
-import Navbar from './Component/Navbar'
-import 'bootstrap/dist/css/bootstrap.css';
-import Assignment from './Component/Assignment'
+import React,{ useEffect, useState } from 'react'
+import Fashion from './Component/Fashion'
+
 function App() {
+  const [books,setBooks]=useState([]);
+  useEffect(()=> {
+    fetch('https://fakestoreapi.com/products')
+    .then(res=>res.json())
+    .then(data=>{
+      setBooks(data);
+    })
+  }, [])
+
   return (
     <div>
-      <Navbar home="Abes" />
-      <br />
-      <Card name="Arpit" edu="Btech" />
-      <br />
-      <Card name="Ayush" edu="Mtech" />
-      <br />
-      <Card name="Vivek" edu="Phd"/>
-      <Assignment/>
+      {
+        books.map((b, i)=>(
+             <Fashion key={i} image={b.image} price={b.price} title={b.title} />
+        ))
+      }
+     
     </div>
-  )
+  );
 }
 
 export default App
